@@ -1,0 +1,32 @@
+<%= @events.size %> download(s) found
+
+<table border='1'>
+  <tr>
+    <th>EventIdentifier</th>
+    <th>TimeStamp</th>
+    <th>AgentBundleIdentifier</th>
+    <th>AgentName</th>
+    <th>DataURLString</th>
+    <th>SenderName</th>
+    <th>SenderAddress</th>
+    <th>TypeNumber</th>
+    <th>OriginTitle</th>
+    <th>OriginURLString</th>
+    <th>OriginAlias</th>
+  </tr>
+<% @events.each do |event| %>
+  <tr>
+    <td><%= event.LSQuarantineEventIdentifier %></td>
+    <td><%= event.LSQuarantineTimeStamp %></td>
+    <td><%= event.LSQuarantineAgentBundleIdentifier %></td>
+    <td><%= event.LSQuarantineAgentName %></td>
+    <td><%= event.LSQuarantineDataURLString %></td>
+    <td><%= event.LSQuarantineSenderName %></td>
+    <td><%= event.LSQuarantineSenderAddress %></td>
+    <td><%= event.LSQuarantineTypeNumber %></td>
+    <td><%= event.LSQuarantineOriginTitle %></td>
+    <td><%= event.LSQuarantineOriginURLString %></td>
+    <td><%= event.LSQuarantineOriginAlias %></td>
+  </tr>
+<% end %>
+</table>
